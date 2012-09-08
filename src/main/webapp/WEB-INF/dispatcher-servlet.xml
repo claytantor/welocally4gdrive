@@ -21,7 +21,7 @@
 	     load this as part of the filter it must be aware of the controllers -->
 	     
 	<!-- Scans the classpath of this application for @Components to deploy as beans -->
-	<context:component-scan base-package="com.welocally.admin.mvc" />
+	<context:component-scan base-package="com.welocally.gdrive.mvc" />
 	<context:annotation-config />
 	<mvc:annotation-driven />
 
@@ -30,7 +30,7 @@
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>${admin.properties}</value>
+				<value>${gdrive.properties}</value>
 			</list>
 		</property>
 	</bean>     
@@ -47,6 +47,5 @@
 	  <property name="suffix" value=".jsp"/>
 	</bean>
 	
-
 	
 </beans>

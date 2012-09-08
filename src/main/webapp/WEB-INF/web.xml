@@ -11,7 +11,6 @@
 		classpath:security-config-beans.xml,
 		classpath:welocally4j-application-beans.xml,
 		classpath:activemq-cfg.xml,
-		classpath:mqBroker-beans.xml,
 		classpath:publishIndexJMSQueue-beans.xml
 		</param-value>
 	</context-param>

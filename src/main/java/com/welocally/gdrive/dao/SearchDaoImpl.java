@@ -21,9 +21,7 @@ public class SearchDaoImpl
 	}
 
     
-    /* (non-Javadoc)
-     * @see com.welocally.admin.dao.SeachDao#findByQuery(java.lang.String)
-     */
+
     public List<Search> findByQuery(String query) {
         Query q = super.getCurrentSession().createQuery(
                 "select e from "+Search.class.getName()+
@@ -33,9 +31,7 @@ public class SearchDaoImpl
     }
 
     
-    /* (non-Javadoc)
-     * @see com.welocally.admin.dao.SeachDao#findByOwner(com.welocally.admin.security.UserPrincipal)
-     */
+
     public List<Search> findByOwner(UserPrincipal up) {
         Query q = super.getCurrentSession().createQuery(
                 "select e from "+Search.class.getName()+
@@ -46,10 +42,7 @@ public class SearchDaoImpl
 
     
    
-    
-    /* (non-Javadoc)
-     * @see com.welocally.admin.dao.SeachDao#findByIndexId(java.lang.String)
-     */
+
     public Search findByIndexId(String indexId) {
         Query q = super.getCurrentSession().createQuery(
                 "select e from "+Search.class.getName()+
