@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/task 
+		http://www.springframework.org/schema/task/spring-task-3.0.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+        
+
+	<!-- Configures the @Controller programming model -->
+	<!-- the component scan for the controller is required for the dispatch model, since we
+	     load this as part of the filter it must be aware of the controllers -->
+	     
+	<!-- Scans the classpath of this application for @Components to deploy as beans -->
+	<context:component-scan base-package="com.welocally.admin.mvc" />
+	<context:annotation-config />
+	<mvc:annotation-driven />
+
+	<!-- property placeholder -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>${admin.properties}</value>
+			</list>
+		</property>
+	</bean>     
+
+			
+	<!-- Forwards requests to the "/" resource to the "welcome" view -->
+	<mvc:view-controller path="/" view-name="index"/>
+	<mvc:view-controller path="/index.html" view-name="index"/>
+	<mvc:view-controller path="/login" view-name="login"/>
+	
+	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	  <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+	  <property name="prefix" value="/WEB-INF/views/"/>
+	  <property name="suffix" value=".jsp"/>
+	</bean>
+	
+
+	
+</beans>

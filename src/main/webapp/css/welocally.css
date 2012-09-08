@@ -1,0 +1,59 @@
+/*------- html */
+html,body {
+	font-family: 'Carme', verdana, arial, helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #ffffff;
+}
+
+input {
+height: 30px !important;
+}
+
+ul.none {list-style-type:none; list-style: none;}
+
+.geogrid{
+ font-size: 0.8em;
+}
+
+/*-------- search index form */
+#fields { float:left; margin-right: 2em; list-style: none; list-style-type: none;}
+.dragfield { 
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding: 3px;
+	width:170px;
+	margin-bottom: 4px;
+	background: #eee;
+	color: black;
+	font-size: 0.8em;
+	padding: 3px;
+	line-height: 18px;
+}
+
+.fieldbucket{
+	display:inline-block;
+	width:220px;
+	margin-left:4px;
+	padding-left:10px;	
+	border-left: 1px solid #aaa;
+}
+
+.fselect{
+	margin: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding: 4px;
+	width:220px;
+}
+
+.fdrop {width:240px; list-style: none;list-style-type: none; }
+
+.phold{ font-style: italic; color: #aaa; }
+
+
+#index { float: left; width:170px; }
+/* style the list to maximize the droppable hitarea */
+#index ol { margin: 0; padding: 1em 0 1em 3em; width:170px;	 }
